@@ -71,6 +71,7 @@
         document.getElementById("idAttribute").value = dataId;
     }
 </script>
+
 <div class="modal fade theme-modal" id="deleteConfirm" aria-hidden="true" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content py-3">
