@@ -32,8 +32,10 @@
 
             <div class="col-lg-4">
                 <aside class="news-sidebar-area">
+
                     <div class="news-single-widget">
                         <h6 class="widget-title">Bài viết mới nhất</h6>
+
                         <?php foreach ($dataNews as $newsItem) {
                         ?>
                             <div class="content-blog-side">
@@ -55,6 +57,8 @@
                                 </div>
                             </div>
                         <?php } ?>
+
+
                     </div>
                     <div class="news-single-widget mt--40">
                         <h6 class="widget-title">Sản phẩm đã xem gần đây</h6>

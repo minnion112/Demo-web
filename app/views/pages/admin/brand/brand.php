@@ -1,5 +1,10 @@
 <?php
+
+// echo '<pre>';
+// print_r($dataBrand);
+// echo '</pre>';
 ?>
+
 <section class="product-wrap">
     <div class="card">
         <div class="title-header">
@@ -12,6 +17,7 @@
                 </ul>
             </div>
         </div>
+
         <div class="table-custom">
             <table class="theme-table" id="table_id">
                 <thead class="rounded-3 overflow-hidden  ">
@@ -20,6 +26,7 @@
                         <th>Thực thi</th>
                     </tr>
                 </thead>
+
                 <tbody>
 
                     <?php foreach ($dataBrand as $brandItem) {
@@ -43,6 +50,7 @@
                                 </ul>
                             </td>
                         </tr>
+
                     <?php } ?>
 
                 </tbody>

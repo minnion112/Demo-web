@@ -33,9 +33,11 @@
                                 <a class="nav-item nav-link" data-bs-toggle="tab" href="#nav-address" role="tab" aria-selected="false">
                                     <i class="fas fa-location-circle"></i>Địa chỉ
                                 </a>
+
                                 <a class="nav-item nav-link" data-bs-toggle="tab" href="#nav-account" role="tab" aria-selected="false">
                                     <i class="fas fa-user"></i>Tài khoản
                                 </a>
+
                                 <a class="nav-item nav-link" href="logout">
                                     <i class="fas fa-sign-out"></i>Đăng xuất
                                 </a>

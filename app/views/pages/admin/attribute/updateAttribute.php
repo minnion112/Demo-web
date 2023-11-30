@@ -21,6 +21,7 @@
                                     <input name="display_name" value="<?= $dataAttribute['display_name'] ?? '' ?>" class="form-control input-text" type="text" placeholder="Màu sắc, kích kích thước, ...">
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>

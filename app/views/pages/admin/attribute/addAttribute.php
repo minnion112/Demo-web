@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <section class="add-wrap-admin">
     <div class="container-fluid ">
         <form method="POST" enctype="multipart/form-data">
@@ -21,6 +25,7 @@
                                     <input name="display_name" value="<?= $dataValueOld['display_name'] ?? '' ?>" class="form-control input-text" type="text" placeholder="Màu sắc, kích kích thước, ...">
                                 </div>
                             </div>
+
                             <div class="mb-5 row align-items-center">
                                 <label class="form-label-title col-sm-3 mb-0">Giá trị thuộc tính </label>
                                 <div class="col-sm-9">
@@ -31,8 +36,11 @@
                         </div>
                     </div>
                 </div>
+
                 <button class="btn btn-custom col-sm-8 m-auto">Thêm thuộc tính mới </button>
             </div>
         </form>
     </div>
+
+
 </section>

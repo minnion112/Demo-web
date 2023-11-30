@@ -1,4 +1,7 @@
 <?php
+// echo '<pre>';
+// print_r($dataAttributeValue);
+// echo '</pre>';
 
 ?>
 
@@ -14,6 +17,7 @@
                 </ul>
             </div>
         </div>
+
         <div class="table-custom">
             <table class="theme-table" id="table_id">
                 <thead class="rounded-3 overflow-hidden  ">

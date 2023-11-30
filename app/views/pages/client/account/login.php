@@ -12,6 +12,7 @@
             </div>
         </div>
     </div>
+
     <div class="row">
         <div class="col-xl-4 col-lg-6">
             <div class="signin-banner bg_image bg_image--9">
