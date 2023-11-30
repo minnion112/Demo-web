@@ -32,7 +32,6 @@
                             <label>Email</label>
                             <input type="email" class="form-control" name="email" placeholder="Email">
                         </div>
-
                         <div class="form-group d-flex align-items-center justify-content-between">
                             <div>
                                 <button type="button" id="btn_ele" onclick="forgotPasswordUser()" class="btn btn-custom text-capitalize ">Gửi ngay <span class="spin"><i class="fas fa-spinner"></i></span></button>

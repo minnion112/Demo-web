@@ -35,4 +35,3 @@ dist-ssr
 # Style.scss & Style.map.css
 *.scss
 *.css.map
-.history

@@ -10,7 +10,6 @@
                 <div class="title-header">
                     <h5 class="title">Đơn hàng #<?= $dataOrder[0]['order_code'] ?></h5>
                 </div>
-
                 <div class="order-detail">
                     <div class="order-top">
                         <ul class="info">
@@ -57,10 +56,7 @@
                                             </tr>
 
                                         <?php } ?>
-
-
                                     </tbody>
-
                                     <tfoot class="mt-4">
                                         <tr class="table-order-footer">
                                             <td colspan="3">
@@ -70,7 +66,6 @@
                                                 <h4><?= Format::formatCurrency($subtotal) ?></h4>
                                             </td>
                                         </tr>
-
                                         <tr class="table-order-footer ">
 
                                             <td colspan="3">

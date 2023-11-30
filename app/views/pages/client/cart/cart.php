@@ -17,12 +17,9 @@
                             <th scope="col" class="product-subtotal">Tạm tính</th>
                         </tr>
                     </thead>
-                    <tbody id="cart_main">
-                    </tbody>
+                    <tbody id="cart_main"></tbody>
                 </table>
-                <div id="not-cart-main">
-
-                </div>
+                <div id="not-cart-main"></div>
 
             </div>
             <!-- <div class="cart-discount-btn-area">
@@ -30,7 +27,6 @@
                 <div class="product-cupon-btn">
                     <button type="submit" class="cart-btn">Áp dụng</button>
                 </div>
-
             </div> -->
             <div class="row">
                 <div class="col-xl-5 col-lg-7 offset-xl-7 offset-lg-5">

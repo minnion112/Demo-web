@@ -7,7 +7,6 @@
                 // Xu ly ma giam gia
                 preg_match('/(\d+)(%)/', $value, $couponValue);
                 $value = end($couponValue) == '%' ?  $value : Format::formatCurrency($value)
-
             ?>
                 <div class="col-lg-6">
                     <div class="coupon-area-wrap">

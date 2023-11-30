@@ -3,7 +3,6 @@
 // print_r($dataCart);
 // echo '</pre>';
 ?>
-
 <section class="header-top-campaign">
     <div class="container">
         <div class="row justify-content-center">
@@ -25,7 +24,6 @@
                             </div>
                         </div>
                     <?php endforeach ?>
-
                 </div>
             </div>
         </div>
@@ -39,7 +37,6 @@
                 <div class="col-lg-6 pe-5 ">
                     <div class="checkout-billing">
                         <h4 class="title mb--30">Thanh toán</h4>
-
                         <!-- <div class="address-default">
                             <div class="heading-address">
                                 <i class="fas fa-map-marker-alt"></i>
