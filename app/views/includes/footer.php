@@ -87,7 +87,7 @@
                                  <li><a href="login">Đăng nhập / Đăng kí</a></li>
                                  <li><a href="cart">Giỏ hàng</a></li>
                                  <li><a href="coming-soon">Yêu thích</a></li>
-                                 <li><a href="product">Danh mục sản phẩm</a></li>
+                                 <li><a href="product-category">Danh mục sản phẩm</a></li>
                              </ul>
                          </div>
                      </div>

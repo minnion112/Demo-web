@@ -4097,5 +4097,5 @@
   transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .new-arrivals-product-area .new-arrivals-product .product-area-two .product-content .cart-action li.select-option a:hover::before {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }/*# sourceMappingURL=style.css.map */

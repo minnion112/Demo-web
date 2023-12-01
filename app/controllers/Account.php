@@ -53,7 +53,7 @@ class Account extends Controller
         // [1] => zFicq1700390884 // order_code
         $order_id = reset($orderIdArr);
 
-        $dataOrder = $this->orderModel->getAllOrderItemByUser($this->user_id, $order_id);
+        $dataOrder = $this->orderModel->getAllOrderItemByUser($order_id);
         $dataOrderStatus = $this->orderModel->getAllOrderStatus();
 
 
@@ -95,6 +95,7 @@ class Account extends Controller
 
             $dataOrderNew = array_values($dataOrderNew);
         }
+
 
 
         $this->view('layoutClient', [

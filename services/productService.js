@@ -198,21 +198,17 @@ $('.product-filter-select').change(handleFilterChange);
 const filterProduct = async () => {
   // Get form data
   const formData = new FormData($('#form-prod-category').get(0));
-
   // Kiem tra co param search hay khong
   const queryParams = new URLSearchParams(window.location.search);
   const search = queryParams.get('search');
-
   // neu co search se them search vao params
   if (search) {
     formData.append('search', search);
   }
-
   //Lay param cua form va dua len url
   const queryString = new URLSearchParams(formData).toString();
   const newURL = `http://localhost/WEB2041_Ecommerce/product-category?${queryString}`;
   history.pushState({}, '', newURL);
-
   try {
     const fetchPromise = await fetch('product-filter', {
       method: 'POST',

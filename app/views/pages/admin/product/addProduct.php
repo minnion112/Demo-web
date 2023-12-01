@@ -129,6 +129,7 @@
                             <?php } ?>
 
                             <div class="btn-variant">
+
                                 <button id="add-variant" type="button"> <i class="fa fa-plus"></i> Tạo ra biến thể </button>
                             </div>
                         </div>

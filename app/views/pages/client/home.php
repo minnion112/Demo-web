@@ -14,7 +14,7 @@
                     <h1 class="title"><?= $dataBannerTitle['description'] ?></h1>
 
                     <div class="shop-btn">
-                        <a href="product/category/31" class="btn btn-bg-white right-icon">Khám phá <i class="fal fa-long-arrow-right"></i></a>
+                        <a href="product-category?category=<?= $dataBannerTitle['cate_id'] ?>" class="btn btn-bg-white right-icon">Khám phá <i class="fal fa-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -202,7 +202,7 @@
                 <?php endforeach; ?>
 
                 <div class="col-lg-12 text-center mt--20 mt_sm--0">
-                    <a href="product/" class="btn-custom btn-bg-lighter">Xem tất cả</a>
+                    <a href="product-category" class="btn-custom btn-bg-lighter">Xem tất cả</a>
                 </div>
             </div>
         </div>
@@ -255,7 +255,7 @@
                                         </a>
                                     </li>
                                     <li class="select-option">
-                                        <a href="<?= $prodNewDateItem['slug'] ?>-<?= $prodNewDateItem['id'] ?>">Mua sản phẩm
+                                        <a href="product/<?= $prodNewDateItem['slug'] ?>-<?= $prodNewDateItem['id'] ?>">Mua sản phẩm
                                         </a>
                                     </li>
                                     <li class="wishlist">
