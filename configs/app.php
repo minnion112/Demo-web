@@ -4,7 +4,7 @@ $config['app'] = [
         Authentication::class
     ],
     'routeMiddleware' => [
-        'account' => AuthIsLogin::class,
+        'my-account' => AuthIsLogin::class,
         'checkout' => AuthIsLogin::class,
         'orderDetail/(.+)' => AuthIsLogin::class,
         'updateUserCurrent' => AuthIsLogin::class,

@@ -343,7 +343,7 @@ class Checkout extends Controller
         Cookie::unsetCookie('dataOrderTemp');
 
         if ($deleteCart && $deleteCartItem) {
-            return $this->res->setToastSession('success', 'Bạn đã đặt hàng thành công.', 'account');
+            return $this->res->setToastSession('success', 'Bạn đã đặt hàng thành công.', 'my-account');
         } else {
             return $this->res->setToastSession('error', 'Đặt hàng thất bại vui lòng thử lại.', 'checkout');
         }
@@ -383,20 +383,20 @@ class Checkout extends Controller
 
         // Neu thanh toan that bai 
         Cookie::unsetCookie('dataOrderTemp');
-        return $this->res->setToastSession('error', 'Đặt hàng thất bại vui lòng thử lại.', 'account');
+        return $this->res->setToastSession('error', 'Đặt hàng thất bại vui lòng thử lại.', 'my-account');
     }
 
     // Xu ly trang thai don hang
     function updateOrderStatus()
     {
         if (!$this->req->isPost()) {
-            return $this->res->redirect('account');
+            return $this->res->redirect('my-account');
         }
 
         $dataPost = $this->req->getFields();
 
         if (empty($dataPost['order_id']) || empty($dataPost['order_status_id'])) {
-            return $this->res->setToastSession('error', 'Có lỗi xảy ra vui lòng thử lại', 'account');
+            return $this->res->setToastSession('error', 'Có lỗi xảy ra vui lòng thử lại', 'my-account');
         }
 
         $updateStatus = $this->orderModel->updateOrder($dataPost['order_id'], [
@@ -404,7 +404,7 @@ class Checkout extends Controller
         ]);
 
         if (!$updateStatus) {
-            return $this->res->setToastSession('error', 'Có lỗi xảy ra vui lòng thử lại', 'account');
+            return $this->res->setToastSession('error', 'Có lỗi xảy ra vui lòng thử lại', 'my-account');
         }
 
         if ($dataPost['order_status_id'] == 4) {
@@ -427,6 +427,6 @@ class Checkout extends Controller
             }
         }
 
-        return $this->res->setToastSession('success', 'Bạn đã cập nhập đơn hàng thành công.', 'account');
+        return $this->res->setToastSession('success', 'Bạn đã cập nhập đơn hàng thành công.', 'my-account');
     }
 }

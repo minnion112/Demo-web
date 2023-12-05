@@ -93,7 +93,7 @@ $menu = array(
                             <span class="title">Đường dẫn nhanh</span>
                             <ul>
                                 <li>
-                                    <a href="account">Tài khoản</a>
+                                    <a href="my-account">Tài khoản</a>
                                 </li>
                                 <li>
                                     <a href="coming-soon">Bắt đầu trả hàng</a>

@@ -372,6 +372,7 @@ class Account extends Controller
         $type = 'error';
         $dataPost = $this->req->getFields();
 
+
         //Set rule
         $this->req->rules([
             'email' => 'required|email',
@@ -520,7 +521,7 @@ class Account extends Controller
         $dataUserUp = $this->userModel->getOneUser($this->user_id) ?? [];
         $type = 'error';
         if (!$this->req->isPost()) {
-            return $this->res->setToastSession('error', 'Có lỗi vui lòng thử lại.', 'account');
+            return $this->res->setToastSession('error', 'Có lỗi vui lòng thử lại.', 'my-account');
         }
         //Get data post
         $dataPost = $this->req->getFields();
@@ -554,7 +555,7 @@ class Account extends Controller
         // Neu co loi validate se hien loi
         if (!empty($dataError)) {
             $this->Toast($type, reset($dataError));
-            return $this->res->setToastSession('error', reset($dataError), 'account');
+            return $this->res->setToastSession('error', reset($dataError), 'my-account');
         }
 
 
@@ -562,18 +563,18 @@ class Account extends Controller
 
         $checkEmail = $this->userModel->checkPhoneExisted($dataPost['email']);
         if ($dataUserUp['email'] != $dataPost['email'] && !empty($checkEmail)) {
-            return $this->res->setToastSession('error', 'Email đẫ tồn tại', 'account');
+            return $this->res->setToastSession('error', 'Email đẫ tồn tại', 'my-account');
         }
 
         $checkPhone = $this->userModel->checkPhoneExisted($dataPost['phone']);
         if ($dataUserUp['phone'] != $dataPost['phone'] && !empty($checkPhone)) {
-            return $this->res->setToastSession('error', 'Số điện thoại đẫ tồn tại', 'account');
+            return $this->res->setToastSession('error', 'Số điện thoại đẫ tồn tại', 'my-account');
         }
 
 
         //Kiem tra lai mat khau
         if (!password_verify($dataPost['old_password'], $dataUserUp['password'])) {
-            return $this->res->setToastSession('error', 'Mật khẩu không chính xác.', 'account');
+            return $this->res->setToastSession('error', 'Mật khẩu không chính xác.', 'my-account');
         }
 
         $hashedPassword = password_hash($dataPost['new_password'], PASSWORD_BCRYPT);
@@ -592,13 +593,13 @@ class Account extends Controller
         if (!empty($avatar['name'])) {
             //  validate Upload image thumb
             if (!Format::validateUploadImage($avatar)) {
-                return $this->res->setToastSession('error', 'Có lỗi vể ảnh vui lòng kiểm tra lại.', 'account');
+                return $this->res->setToastSession('error', 'Có lỗi vể ảnh vui lòng kiểm tra lại.', 'my-account');
             }
 
             //upload anh len cloud
             $urlAvatar = Services::uploadImageToCloudinary($avatar['tmp_name']);
             if (empty($urlAvatar)) {
-                return $this->res->setToastSession('error', 'Có lỗi vể ảnh vui lòng kiểm tra lại.', 'account');
+                return $this->res->setToastSession('error', 'Có lỗi vể ảnh vui lòng kiểm tra lại.', 'my-account');
             }
 
             $dataUpdate['avatar'] = $urlAvatar;
@@ -606,9 +607,9 @@ class Account extends Controller
 
         $updateUser = $this->userModel->updateUser($this->user_id, $dataUpdate);
         if ($updateUser) {
-            return $this->res->setToastSession('success', 'Cập nhập tài khoản thành công.', 'account');;
+            return $this->res->setToastSession('success', 'Cập nhập tài khoản thành công.', 'my-account');;
         } else {
-            return $this->res->setToastSession('error', 'Cập nhập tài khoản thất bại.', 'account');;
+            return $this->res->setToastSession('error', 'Cập nhập tài khoản thất bại.', 'my-account');;
         }
     }
 }

@@ -151,7 +151,6 @@ const forgotPasswordUser = async () => {
 
     if (response.ok) {
       const data = await response.json();
-      console.log(data);
       if (data.success) {
         showAlert(data.success, 'success', 2000);
       } else if (data.error) {

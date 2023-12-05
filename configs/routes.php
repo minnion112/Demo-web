@@ -24,7 +24,7 @@ $routes['signup-comfirm/(.+)'] = 'account/finalRegisterUser/$1';
 $routes['strongPassword'] = 'account/checkStrongPasswordApi';
 $routes['isIdenti'] = 'account/checkIdentificateExistedApi';
 
-$routes['account'] = 'account/default';
+$routes['my-account'] = 'account/default';
 $routes['order-detail/(.+)'] = 'account/orderDetail/$1';
 $routes['updateUserCurrent'] = 'account/updateUserCurrent';
 

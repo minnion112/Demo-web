@@ -29,8 +29,8 @@ class App
             $url = $this->__routes->handleRoute($url);
 
             //App middlewares
-            $this->handleGlobalMiddleware($this->__DBShare);  //check full app
             $this->handleRouteMiddleware($this->__routes->getKeyRoute(), $this->__DBShare);        //Gan key cua route va xu ly
+            $this->handleGlobalMiddleware($this->__DBShare);  //check full app
 
             //App service provider
             $this->handleAppServiceProvider($this->__DBShare);
