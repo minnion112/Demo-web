@@ -118,8 +118,8 @@
 <section class="product-area">
     <div class="container">
         <div class="title">
-            <span class="title-highlighter highlighter-secondary"> <i class="far fa-shopping-basket"></i>Các mục đã xem gần đây</span>
-            <h2 class="title">Sản phẩm từng xem</h2>
+            <span class="title-highlighter highlighter-secondary"> <i class="far fa-shopping-basket"></i>Lượt xem sản phẩm</span>
+            <h2 class="title">Sản phẩm được nhiều lượt xem</h2>
         </div>
 
         <div class="main-product">

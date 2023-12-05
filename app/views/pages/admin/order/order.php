@@ -39,7 +39,7 @@
                         <tr>
                             <td class="fw-bold "><?= "#$order_code" ?></td>
                             <td><?= $order_date ?></td>
-                            <td><?= $fullname ?></td>
+                            <td class="fw-bold "><?= $fullname ?></td>
                             <td><?= $payment_method_name ?></td>
                             <td class="fw-bold "><?= Format::formatCurrency($total_money) ?></td>
                             <td class=" <?= $dataOrderItem['order_status_id'] == 5 ? 'status-danger' : 'status-success' ?>">
