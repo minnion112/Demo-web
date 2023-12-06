@@ -52,7 +52,7 @@ $routes['admin/delete-product-thumb/(.+)'] = 'admin/product/deleteThumbProduct/$
 $routes['admin/delete-product-image/(.+)/(.+)'] = 'admin/product/deleteImageProduct/$1/$2';
 
 //Product ratings
-$routes['admin/rating-product'] = 'admin/product/rating';
+$routes['admin/rating-product/(.+)'] = 'admin/product/rating/$1';
 $routes['admin/hide-product-rating'] = 'admin/product/hideComment';
 
 // Product variants

@@ -90,14 +90,6 @@
                 </li>
 
                 <!--  -->
-                <li class="sidebar-list <?= $active == 'ratings' ? 'active' : '' ?>">
-                    <a class="sidebar-list-link " href="admin/rating-product">
-                        <i class="fas fa-star"></i>
-                        <span>Đánh giá sản phẩm</span>
-                    </a>
-                </li>
-
-                <!--  -->
                 <li class="sidebar-list <?= $active == 'storeCustom' ? 'active' : '' ?>">
                     <a class="sidebar-list-link " href="admin/store-custom">
                         <i class="fab fa-centos"></i>

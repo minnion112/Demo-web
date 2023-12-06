@@ -197,9 +197,9 @@ class ProductModel extends BaseModel
 
 
 
-    function getAllRatings()
+    function getAllRatings($prod_id)
     {
-        return $this->db->table('ratings r')->select('r.id, r.create_at, p.title, r.status , r.star, r.comment, u.fullname, u.avatar ')->join('user u', 'r.user_id = u.id')->join('product p', 'p.id = r.prod_id')->get();
+        return $this->db->table('ratings r')->select('r.id, r.create_at, p.title, r.status , r.star, r.comment, u.fullname, u.avatar ')->join('user u', 'r.user_id = u.id')->join('product p', 'p.id = r.prod_id')->where('r.prod_id', '=', $prod_id)->get();
     }
     function getAllRatingDashboard()
     {
@@ -210,8 +210,6 @@ class ProductModel extends BaseModel
     {
         return $this->db->table('ratings r')->select('r.id, r.create_at, r.star, r.comment, u.fullname, u.avatar ')->join('user u', 'r.user_id = u.id')->where('r.prod_id', '=', $prod_id)->where('r.status', '=', 1)->get();
     }
-
-
 
 
     function getOneRating($id)

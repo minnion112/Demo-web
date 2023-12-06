@@ -16,6 +16,7 @@ $config['app'] = [
         'admin/update-user/(.+)' => Authorization::class,
         'admin/delete-user' => Authorization::class,
 
+        'admin/hide-product-rating' => Authorization::class,
         'admin/add-role' => Authorization::class,
         'admin/update-role/(.+)' => Authorization::class,
         'admin/delete-role' => Authorization::class,

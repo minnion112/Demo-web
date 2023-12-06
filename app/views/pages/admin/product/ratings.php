@@ -7,7 +7,15 @@
 <section class="product-wrap">
     <div class="card">
         <div class="title-header">
-            <h5 class="title">Danh sách đánh giá</h5>
+            <?php
+            if (!empty($dataRatings)) :
+            ?>
+                <h5 class="title">Đánh giá sản phẩm "<?= $dataRatings[0]['title'] ?>"</h5>
+            <?php else : ?>
+                <h5 class="title">Sản phẩm chưa có đánh giá</h5>
+            <?php endif ?>
+
+
 
         </div>
 
@@ -32,7 +40,14 @@
                     ?>
                         <tr>
                             <td><?= $i++ ?></td>
-                            <td><?= $fullname ?></td>
+                            <td>
+                                <div class="product-title-name">
+                                    <div class="table-image table-image--product">
+                                        <img src="<?= $avatar ?>" class="img-fluid" alt="<?= $fullname ?>">
+                                    </div>
+                                    <div class="text-truncate text-title"><?= $fullname ?></div>
+                                </div>
+                            </td>
                             <td><?= $title ?></td>
                             <td style="color: var(--star);"><?= Format::renderStars($star) ?></td>
                             <td>

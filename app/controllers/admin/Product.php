@@ -921,7 +921,7 @@ class Product extends Controller
     }
 
 
-    function rating()
+    function rating($prod_id)
     {
         if (!$this->req->isPost()) {
             $toastMessage = Session::get('toastMessage');
@@ -929,11 +929,11 @@ class Product extends Controller
             $this->ToastSession($toastMessage, $toastType);
         }
 
-        $dataRatings = $this->productModel->getAllRatings() ?? [];
+        $dataRatings = $this->productModel->getAllRatings($prod_id) ?? [];
 
         $this->view('layoutServer', [
             'title' => 'Danh sách đánh giá',
-            'active' => 'ratings',
+            'active' => 'product',
             'pages' => 'product/ratings',
             'dataRatings' => $dataRatings,
         ]);

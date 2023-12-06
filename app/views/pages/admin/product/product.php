@@ -28,6 +28,7 @@
                         <th>Trạng thái</th>
                         <th>Hiển thị</th>
                         <th>Biến thể</th>
+                        <th>Đánh giá</th>
                         <th>Thực thi</th>
                     </tr>
                 </thead>
@@ -91,6 +92,13 @@
                                         </a>
                                     </li>
                                 </div>
+                            </td>
+
+                            <td>
+                                <a class="text-decoration-underline text-primary" href="admin/rating-product/<?= $product['id'] ?>">
+                                    Chi tiết
+                                </a>
+
                             </td>
 
                             <td>
