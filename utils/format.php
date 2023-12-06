@@ -25,12 +25,13 @@ class Format
         }
     }
 
-    static function calculateOriginalPrice($Price, $discount)
+    static function calculateOriginalPrice($price, $discount)
     {
         if ($discount < 0 || $discount > 100) {
             return $originalPrice = 0;
         }
-        $originalPrice = $Price / (1 - ($discount / 100));
+
+        $originalPrice = $price / (1 - ($discount / 100));
         $originalPrice = number_format($originalPrice, 0, '.', '.') . ' ₫';
 
         return $originalPrice;
@@ -48,6 +49,7 @@ class Format
                 $starArray[] = '<i class="far fa-star"></i>';
             }
         }
+
         return implode(' ', $starArray);
     }
 

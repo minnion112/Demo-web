@@ -133,7 +133,6 @@ const registerUser = async () => {
 };
 
 // Quen mat khau
-
 const forgotPasswordUser = async () => {
   try {
     const spin = $('.spin');
