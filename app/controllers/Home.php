@@ -24,10 +24,11 @@ class Home extends Controller
 
         $dataCate = $this->categoryModel->getAllCategory() ?? [];
         $dataBannerTitle = $this->db->table('banner')->getOne();
-        $dataBanner = $this->productModel->getProdByCate() ?? [];
+        $dataBanner = $this->productModel->getProdByCate($dataBannerTitle['cate_id']) ?? [];
         $dataProdRecent = $this->productModel->getProdRecently() ?? [];
         $dataProdMostSold = $this->productModel->getProdMostSold() ?? [];
         $dataProdNewDate = $this->productModel->getProdNewDate() ?? [];
+
 
 
         $this->view('layoutClient', [

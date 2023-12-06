@@ -100,6 +100,7 @@
                         <div class="card-header-title">
                             <h4>Sản phẩm bán chạy nhất</h4>
                         </div>
+
                     </div>
                     <div class="card-body border-0 p-0">
                         <table class="table">
@@ -114,7 +115,7 @@
                                                     <img src="<?= $dataProdBestSell['thumb'] ?>" class="img-fluid" alt="<?= $dataProdBestSell['title'] ?>">
                                                 </div>
                                                 <div class="product-name ms-4">
-                                                    <h5 style="max-width: 200px;" class="mb-2 text-truncate "><?= $dataProdBestSell['title']  ?></h5>
+                                                    <a href="product/<?= "{$dataProdBestSell['slug']}-{$dataProdBestSell['id']}" ?>" style="max-width: 200px;" class="mb-2 text-truncate " target="_blank"><?= $dataProdBestSell['title']  ?></a>
                                                     <h6 class="mb-0 "><?= $dataProdBestSell['create_At'] ?></h6>
                                                 </div>
                                             </div>

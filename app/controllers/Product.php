@@ -155,10 +155,11 @@ class Product extends Controller
 
         $dataProd = $this->productModel->getOneProd($id) ?? [];
         $dataImageProd = $this->productModel->getImageProd($id) ?? [];
-        $dataProdRecent = $this->productModel->getProdRecently() ?? [];
+        $dataProdCategory = $this->productModel->getProdByCate($dataProd['cate_id']) ?? [];
         $dataVariant = $this->productModel->getAllProdVariants($id);
         $dataCoupon = $this->couponModel->getAllCoupon();
         $productPrice = $this->productModel->getProductPrice($id);
+
 
         // Lấy ra giá nhỏ và lớn nhất của sản phẩm
         if (!empty($productPrice)) {
@@ -224,7 +225,7 @@ class Product extends Controller
             'dataProd' => $dataProd,
             'dataImageProd' => $dataImageProd,
             'dataVariant' => $dataProdVariantsNew ?? [],
-            'dataProdRecent' => $dataProdRecent,
+            'dataProdCategory' => $dataProdCategory,
             'dataCoupon' => $dataCoupon,
             'productPrice' => $productPriceNew ?? [],
         ]);

@@ -1,6 +1,6 @@
 <?php
 // echo '<pre>';
-// print_r($productPrice);
+// print_r($dataProd);
 // echo '</pre>';
 ?>
 
@@ -71,6 +71,9 @@
                             <div class="product-stock">Số lượng:
                                 <span id="product-stock"><?= $dataProd['isVariant'] == 1 ? $dataVariant[0]['quantity'] : $dataProd['quantity'] ?></span>
                             </div>
+                            <span class="product-sold "><?= $dataProd['sold'] ?> Đã bán</span>
+                            <!-- <span class="product-sold ">view Đã xem</span> -->
+
                             <div id="product-price" class="price">
                                 <span class="price-amount">
                                     <?php
@@ -333,29 +336,29 @@
 <section class="product-area">
     <div class="container">
         <div class="title">
-            <span class="title-highlighter highlighter-secondary"> <i class="far fa-shopping-basket"></i>Lượt xem sản phẩm</span>
-            <h2 class="title">Sản phẩm được nhiều lượt xem</h2>
+            <span class="title-highlighter highlighter-secondary"> <i class="far fa-shopping-basket"></i>Sản phẩm liên quan</span>
+            <h2 class="title">Các sản phẩm liên quan</h2>
         </div>
 
         <div class="main-product">
             <div class="row">
-                <?php foreach ($dataProdRecent as $itemDataProdRecent) : ?>
+                <?php foreach ($dataProdCategory as $itemDataProd) : ?>
                     <?php
-                    $productLink = "product/{$itemDataProdRecent['slug']}-{$itemDataProdRecent['id']}";
-                    $thumbSrc = "{$itemDataProdRecent['thumb']}";
-                    $quantity = $itemDataProdRecent['quantity'];
-                    $discount = $itemDataProdRecent['discount'];
-                    $price = $itemDataProdRecent['price'];
-                    $totalRatings = $itemDataProdRecent['totalRatings'];
-                    $prodTitle = $itemDataProdRecent['title'];
-                    $prodTotalUserRatings = $itemDataProdRecent['totalUserRatings'];
+                    $productLink = "product/{$itemDataProd['slug']}-{$itemDataProd['id']}";
+                    $thumbSrc = "{$itemDataProd['thumb']}";
+                    $quantity = $itemDataProd['quantity'];
+                    $discount = $itemDataProd['discount'];
+                    $price = $itemDataProd['price'];
+                    $totalRatings = $itemDataProd['totalRatings'];
+                    $prodTitle = $itemDataProd['title'];
+                    $prodTotalUserRatings = $itemDataProd['totalUserRatings'];
                     ?>
                     <div class="col-xl-3 mb-5 col-lg-4 col-sm-6 col-12">
                         <div class="product-item px-3">
                             <div class="thumb">
                                 <div class="thumb-img">
                                     <a class="thumb-link" href="<?= $productLink ?>">
-                                        <img data-sal="zoom-out" data-sal-delay="200" data-sal-duration="800" loading="lazy" src="<?= $thumbSrc ?>" alt="<?= $itemDataProdRecent['title'] ?>">
+                                        <img data-sal="zoom-out" data-sal-delay="200" data-sal-duration="800" loading="lazy" src="<?= $thumbSrc ?>" alt="<?= $itemDataProd['title'] ?>">
                                     </a>
 
                                     <div class="actions-hover">
@@ -398,7 +401,7 @@
                                         <span class="rating-number">(<?= $prodTotalUserRatings ?>)</span>
                                     </div>
                                     <h5 class="title">
-                                        <a href="<?= $productLink ?>"><?= $itemDataProdRecent['title'] ?></a>
+                                        <a href="<?= $productLink ?>"><?= $itemDataProd['title'] ?></a>
                                     </h5>
                                     <div class="product-price-variant">
                                         <span class="price current-price"><?= Format::formatCurrency($price) ?></span>
@@ -415,11 +418,9 @@
 
 
                 <div class="col-lg-12 text-center mt--20 mt_sm--0">
-                    <a href="product/" class="btn-custom btn-bg-lighter">Xem tất cả</a>
+                    <a href="product-category?category=<?= $dataProd['cate_id'] ?>" class="btn-custom btn-bg-lighter">Xem tất cả</a>
                 </div>
             </div>
         </div>
-
-
     </div>
 </section>

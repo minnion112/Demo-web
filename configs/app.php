@@ -13,6 +13,7 @@ $config['app'] = [
         'update-order-status' => AuthIsLogin::class,
         'cart' => AuthIsLogin::class,
 
+        'admin/add-user' => Authorization::class,
         'admin/update-user/(.+)' => Authorization::class,
         'admin/delete-user' => Authorization::class,
 

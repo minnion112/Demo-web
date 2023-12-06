@@ -1338,6 +1338,11 @@
 .detail-product-area .detail-product-main .detail-product-content .inner .product-stock span {
   font-weight: 600;
 }
+.detail-product-area .detail-product-main .detail-product-content .inner .product-sold {
+  border-left: 1px solid #e6e6e6;
+  padding-left: 20px;
+  margin-left: 20px;
+}
 .detail-product-area .detail-product-main .detail-product-content .inner .price {
   margin-bottom: 20px;
   display: flex;

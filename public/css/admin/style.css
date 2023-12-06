@@ -260,10 +260,16 @@
   display: flex;
   align-items: center;
 }
-.content-body-admin .content-dashboard-wrap-top .card-table table .best-product-box h5 {
+.content-body-admin .content-dashboard-wrap-top .card-table table .best-product-box h5,
+.content-body-admin .content-dashboard-wrap-top .card-table table .best-product-box a {
+  display: block;
   font-size: 16px;
   font-weight: 500;
   color: var(--color-heading);
+  transition: var(--transition);
+}
+.content-body-admin .content-dashboard-wrap-top .card-table table .best-product-box .product-name a:hover {
+  color: var(--color-primary);
 }
 .content-body-admin .content-dashboard-wrap-top .card-table table .best-product-box h6 {
   font-size: 13px;

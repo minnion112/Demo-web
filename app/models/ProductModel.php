@@ -24,11 +24,9 @@ class ProductModel extends BaseModel
         return $this->db->table($this->tableName())->select('id, title, slug , thumb, price, totalRatings, quantity, discount, totalUserRatings')->where('status', '=', 1)->orderBy('view')->limit(12)->get();
     }
 
-    function getProdByCate()
+    function getProdByCate($cate_id)
     {
-        $sql = "SELECT p.id, p.title, p.slug, p.thumb, p.price FROM banner b JOIN product p ON p.cate_id = b.cate_id WHERE p.status = 1 ORDER BY p.id DESC ";
-        $data = $this->db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-        return $data;
+        return $this->db->table($this->tableName())->select('id, title, slug , thumb, price, totalRatings, quantity, discount, totalUserRatings')->where('status', '=', 1)->orderBy('view')->where('cate_id', '=', $cate_id)->limit(8)->get();
     }
 
     function getProdMostSold()
@@ -106,7 +104,7 @@ class ProductModel extends BaseModel
 
     function getAllProductOrderBySold()
     {
-        $data = $this->db->table($this->tableName())->select('thumb, title, create_At, price, sold, quantity')->orderBy('sold')->limit(4)->get();
+        $data = $this->db->table($this->tableName())->select('id, slug, thumb, title, create_At, price, sold, quantity')->orderBy('sold')->limit(4)->get();
         return $data;
     }
 
