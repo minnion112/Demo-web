@@ -928,9 +928,7 @@ class Product extends Controller
             $toastType = Session::get('toastType');
             $this->ToastSession($toastMessage, $toastType);
         }
-
         $dataRatings = $this->productModel->getAllRatings($prod_id) ?? [];
-
         $this->view('layoutServer', [
             'title' => 'Danh sách đánh giá',
             'active' => 'product',

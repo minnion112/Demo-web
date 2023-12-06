@@ -1,7 +1,5 @@
 <?php
-// echo '<pre>';
-// print_r($userData);
-// echo '</pre>';
+
 $menu = array(
     [
         'name' => 'Trang chủ',
@@ -74,7 +72,6 @@ $menu = array(
                             <i class="flaticon-heart"></i>
                         </a>
                     </li>
-
                     <li class="shopping-cart">
                         <button class="action-link shopping-cart-btn">
                             <i class="flaticon-shopping-cart"></i>
@@ -84,7 +81,6 @@ $menu = array(
                         <?php endif; ?>
 
                     </li>
-
                     <li class="my-account position-relative ">
                         <button class="action-link ">
                             <i class="flaticon-person"></i>
