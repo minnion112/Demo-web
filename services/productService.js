@@ -42,6 +42,7 @@ const toggleStatusProdRating = (id) => {
     },
     error: function (xhr, status, error) {
       console.error(error);
+      return showToast('error', 'Vui lòng đăng nhập tài khoản quản trị.');
     },
   });
 };

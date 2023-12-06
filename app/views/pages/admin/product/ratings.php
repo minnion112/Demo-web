@@ -15,8 +15,6 @@
                 <h5 class="title">Sản phẩm chưa có đánh giá</h5>
             <?php endif ?>
 
-
-
         </div>
 
         <div class="table-custom">
