@@ -21,7 +21,7 @@
                     ?>
                         <div class="slick-slide">
                             <div class="campaign-content">
-                                <p class="text-uppercase "><?= "{$dataCouponItem['title']} $couponValue" ?> : <a href="coupon">NHẬN GIẢM GIÁ</a></p>
+                                <p class="text-uppercase "><?= "{$dataCouponItem['title']} $couponValue" ?> : <a href="coupon" target="_blank">NHẬN GIẢM GIÁ</a></p>
                             </div>
                         </div>
                     <?php endforeach ?>
@@ -114,16 +114,16 @@
                                                         <img src="<?= $cartItem['thumb'] ?>" alt="<?= $cartItem['title'] ?>">
                                                     </div>
                                                     <div class="title">
-                                                        <p class="mb-0"><?= $cartItem['title'] ?>
-                                                            <span class="quantity"><?= 'x' . $cartItem['quantity'] ?></span>
-                                                        </p>
+                                                        <a href="product/<?= "{$cartItem['slug']}-{$cartItem['product_id']}" ?>" target="_blank" rel="noopener noreferrer">
+                                                            <p class="mb-0"><?= $cartItem['title'] ?>
+                                                                <span class="quantity"><?= 'x' . $cartItem['quantity'] ?></span>
+                                                            </p>
 
-                                                        <span class="variant">Phân loại: <font>
-                                                                <?= $cartItem['attribute_values'] ?>
-                                                            </font>
-                                                        </span>
-
-
+                                                            <span class="variant">Phân loại: <font>
+                                                                    <?= $cartItem['attribute_values'] ?>
+                                                                </font>
+                                                            </span>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </td>

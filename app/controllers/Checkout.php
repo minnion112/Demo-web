@@ -51,6 +51,7 @@ class Checkout extends Controller
                         'cart_id' => $item['cart_id'],
                         'totalPrice' => $item['totalPrice'],
                         'title' => $item['title'],
+                        'slug' => $item['slug'],
                         'thumb' => $item['thumb'],
                         'price' => $item['price'],
                         'quantity' => $item['quantity'],

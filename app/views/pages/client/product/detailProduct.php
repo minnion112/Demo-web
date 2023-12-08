@@ -14,7 +14,7 @@
                     ?>
                         <div class="slick-slide">
                             <div class="campaign-content">
-                                <p class="text-uppercase "><?= $dataCouponItem['title'] ?>: <a href="coupon">NHẬN GIẢM GIÁ</a></p>
+                                <p class="text-uppercase "><?= $dataCouponItem['title'] ?>: <a href="coupon" target="_blank">NHẬN GIẢM GIÁ</a></p>
                             </div>
                         </div>
                     <?php endforeach ?>

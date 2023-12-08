@@ -1590,7 +1590,14 @@
 .woocommerce-tabs .product-desc-wrapper {
   text-align: center;
 }
-.woocommerce-tabs .product-desc-wrapper p {
+.woocommerce-tabs .product-desc-wrapper .image {
+  padding: 20px 0 40px 0;
+}
+.woocommerce-tabs .product-desc-wrapper p,
+.woocommerce-tabs .product-desc-wrapper h3,
+.woocommerce-tabs .product-desc-wrapper h2,
+.woocommerce-tabs .product-desc-wrapper h4,
+.woocommerce-tabs .product-desc-wrapper h1 {
   text-align: left;
 }
 .woocommerce-tabs .product-desc-wrapper .pro-des-features {
@@ -1782,7 +1789,7 @@
   color: var(--color-primary);
 }
 .breadcrumb-area .inner .title {
-  font-size: 40px;
+  font-size: 35px;
   margin-bottom: 0;
 }
 .breadcrumb-area .inner li.separator {
@@ -2993,6 +3000,9 @@
 .checkout-area .order-checkout-summery .summery-table-wrap .order-product .title .variant font {
   color: var(--color-primary);
   font-weight: normal;
+}
+.checkout-area .order-checkout-summery .summery-table-wrap .order-product .title:hover p {
+  color: var(--color-primary);
 }
 .checkout-area .order-checkout-summery .summery-table-wrap .order-product .quantity {
   font-weight: bold;

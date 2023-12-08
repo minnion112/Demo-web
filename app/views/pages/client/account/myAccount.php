@@ -1,6 +1,6 @@
 <?php
 // echo '<pre>';
-// print_r($dataUserCurrent);
+// print_r($dataOrder);
 // echo '</pre>';
 ?>
 <section class="dashboard-account-area">
@@ -90,7 +90,7 @@
                                                             </span>
                                                         </td>
 
-                                                        <td> <?= Format::formatCurrency($dataOrderItem['total_money']) ?></td>
+                                                        <td class="fw-bold"> <?= Format::formatCurrency($dataOrderItem['total_money']) ?></td>
 
                                                     </tr>
 
@@ -108,12 +108,12 @@
                                     <table class="theme-table table_id">
                                         <thead class="rounded-3 overflow-hidden  ">
                                             <tr>
-                                                <th>ID</th>
+                                                <th>Mã đơn</th>
                                                 <th>Ngày đặt hàng</th>
                                                 <th>Phương thức thanh toán</th>
                                                 <th>Trạng thái</th>
                                                 <th>Tổng</th>
-                                                <th>Chi tiết</th>
+                                                <th>Đơn hàng</th>
                                             </tr>
                                         </thead>
 
@@ -128,7 +128,7 @@
                                                     <td>
                                                         <?= $orderItemDetail['order_date'] ?>
                                                     </td>
-                                                    <td>
+                                                    <td class="fw-bold">
                                                         <?= $orderItemDetail['payment_method_name'] ?>
                                                     </td>
                                                     <td class=" <?= $orderItemDetail['order_status_id'] == 5 ? 'status-danger' : 'status-success' ?>">
@@ -136,15 +136,12 @@
                                                             <?= $orderItemDetail['order_status_name'] ?>
                                                         </span>
                                                     </td>
-                                                    <td> <?= Format::formatCurrency($orderItemDetail['total_money']) ?></td>
+                                                    <td class="fw-bold"> <?= Format::formatCurrency($orderItemDetail['total_money']) ?></td>
                                                     <td>
-                                                        <ul class="options">
-                                                            <li class="m-0 ">
-                                                                <a href="order-detail/<?= "{$orderItemDetail['order_id']}-{$orderItemDetail['order_code']}" ?>">
-                                                                    <i class="view fas fa-eye"></i>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
+
+                                                        <a class="text-decoration-underline text-primary" href="order-detail/<?= "{$orderItemDetail['order_id']}-{$orderItemDetail['order_code']}" ?>">
+                                                            Chi tiết
+                                                        </a>
                                                     </td>
 
                                                 </tr>

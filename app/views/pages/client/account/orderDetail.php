@@ -33,15 +33,16 @@
                                         ?>
                                             <tr class="table-order">
                                                 <td>
-                                                    <div class="image">
+                                                    <a href="product/<?= "{$dataOrderItem['slug']}-{$dataOrderItem['prod_id']}" ?>" class="image" target="_blank">
                                                         <img src="<?= $thumb ?>" class="img-fluid blur-up lazyload" alt="<?= $title ?>">
-                                                    </div>
+                                                    </a>
                                                 </td>
                                                 <td>
                                                     <div class="product_variant">
                                                         <h5 class="mt-0">
-                                                            <?= $title ?>
-
+                                                            <a href="product/<?= "{$dataOrderItem['slug']}-{$dataOrderItem['prod_id']}" ?>" target="_blank">
+                                                                <?= $title ?>
+                                                            </a>
                                                         </h5>
                                                         <p>Phân loại: <span><?= $attribute_values ?></span></p>
                                                     </div>

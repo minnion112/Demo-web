@@ -24,12 +24,12 @@
                     <tr>
 
                         <th>Ảnh</th>
+                        <th>Ngày tham gia</th>
                         <th>Họ và tên</th>
                         <th>Số điện thoại</th>
                         <th>Email</th>
                         <th>Quyền</th>
                         <th>Chặn</th>
-                        <th>Ngày tham gia</th>
                         <th>Thực thi</th>
                     </tr>
                 </thead>
@@ -43,6 +43,10 @@
                                 <div class="table-image">
                                     <img style="width: 70px; height: 70px; object-fit: contain; border-radius: 50%;" src="<?= $userItem['avatar'] ?>" class="img-fluid" alt="<?= $userItem['fullname'] ?>">
                                 </div>
+                            </td>
+                            <td>
+
+                                <?= date('Y-m-d', strtotime($userItem['create_At'])) ?>
                             </td>
                             <td class="fw-bold "><?= $userItem['fullname'] ?></td>
                             <td><?= $userItem['phone'] ?></td>
@@ -64,7 +68,8 @@
                                 </div>
                             </td>
 
-                            <td><?= date('F j, Y, g:i a', strtotime($userItem['create_At'])) ?></td>
+
+
 
                             <td>
                                 <ul class="options">

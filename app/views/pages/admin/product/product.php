@@ -1,6 +1,6 @@
 <?php
 // echo '<pre>';
-// print_r($productStock);
+// print_r($prodData);
 // echo '</pre>';
 ?>
 <section class="product-wrap">
@@ -21,6 +21,7 @@
                 <thead class="rounded-3 overflow-hidden  ">
                     <tr>
                         <th>Tên sản phẩm</th>
+                        <th>Ngày nhập</th>
                         <th>Danh mục</th>
                         <th>Thương hiệu</th>
                         <th>Tồn kho</th>
@@ -43,9 +44,15 @@
                                     <div class="table-image table-image--product">
                                         <img src="<?= $product['thumb'] ?>" class="img-fluid" alt="<?= $product['title'] ?>">
                                     </div>
-                                    <div class="text-truncate text-title"><?= $product['title'] ?></div>
+                                    <div class="text-truncate text-title">
+                                        <a href="product/<?= "{$product['slug']}-{$product['id']}" ?>" target="_blank" rel="noopener noreferrer">
+                                            <?= $product['title'] ?>
+                                        </a>
+                                    </div>
                                 </div>
                             </td>
+                            <td><?= date('Y-m-d', strtotime($product['create_at'])) ?></td>
+
 
                             <?php
                             foreach ($cateData as $cateItem) {
