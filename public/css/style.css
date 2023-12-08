@@ -1587,6 +1587,12 @@
 .woocommerce-tabs .nav.tabs .nav-item .active {
   color: var(--color-primary);
 }
+.woocommerce-tabs .product-desc-wrapper {
+  text-align: center;
+}
+.woocommerce-tabs .product-desc-wrapper p {
+  text-align: left;
+}
 .woocommerce-tabs .product-desc-wrapper .pro-des-features {
   margin-left: -30px;
   padding-left: 0;

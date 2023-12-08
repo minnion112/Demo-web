@@ -288,7 +288,7 @@
         arrows: false,
         dots: true,
         speed: 1500,
-        autoplay: false,
+        autoplay: true,
         centerMode: true,
         responsive: [
           {

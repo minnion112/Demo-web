@@ -26,7 +26,9 @@
                         <div class="mian-banner-thumb">
                             <div class="banner-product">
                                 <div class="thumb">
-                                    <a href="product/<?= "{$itemdDataBanner['slug']}-{$itemdDataBanner['id']}" ?>"><img src="<?= $itemdDataBanner['thumb'] ?>" alt="<?= $itemdDataBanner['title'] ?>"></a>
+                                    <a href="product/<?= "{$itemdDataBanner['slug']}-{$itemdDataBanner['id']}" ?>">
+                                        <img data-sal="zoom-out" data-sal-delay="200" data-sal-duration="500" src="<?= $itemdDataBanner['thumb'] ?>" alt="<?= $itemdDataBanner['title'] ?>">
+                                    </a>
                                 </div>
 
                                 <div class="content">

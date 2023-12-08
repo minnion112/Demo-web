@@ -49,8 +49,8 @@
                             <td><?= $code ?></td>
                             <td><?= $value ?></td>
                             <td><?= $min_amount ?></td>
-                            <td class=" <?= $status == 1 && strtotime($expired) > date('YmdHis') ? 'status-success' : 'status-danger' ?>">
-                                <span class="fw-medium"><?= $status == 1 && strtotime($expired) > date('YmdHis') ? 'Hoạt động' : 'Hết hạn' ?></span>
+                            <td class=" <?= $status == 1 && strtotime($expired) > time() ? 'status-success' : 'status-danger' ?>">
+                                <span class="fw-medium"><?= $status == 1 && strtotime($expired) > time() ? 'Hoạt động' : 'Hết hạn' ?></span>
                             </td>
 
                             <td>
