@@ -139,10 +139,10 @@
                                             $quantity = $dataProd['quantity'];
                                             $isProductAvailable = ($quantity != 0);
                                             $buttonText = $isProductAvailable ? 'Thêm vào giỏ hàng' : 'Sản phẩm tạm hết';
-                                            $buttonClass = $isProductAvailable ? 'btn-custom btn-bg-primary' : 'btn-custom btn-bg-primary disabled';
+                                            $buttonClass = $isProductAvailable ? 'btn btn-custom btn-bg-primary' : 'btn btn-custom btn-bg-primary disabled';
                                             ?>
 
-                                            <button onclick="addCart()" type="button" class="<?= $buttonClass; ?>"><?= $buttonText; ?></button>
+                                            <button id="add-Product-To-Cart" onclick="addCart()" type="button" class="<?= $buttonClass; ?>"><?= $buttonText; ?></button>
 
                                         </li>
                                         <li class="wishlist">

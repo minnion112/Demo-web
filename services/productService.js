@@ -65,12 +65,21 @@ const priceHtml = (item) => {
 
 const getVariant = (id) => {
   const productPrice = $('#product-price');
+  const addToCartButton = $('#add-Product-To-Cart');
   $.ajax({
     url: `product/getProductVariant/${id}`,
     method: 'GET',
     dataType: 'json',
     success: function (data) {
       const dataProd = data.data;
+
+      if (dataProd.quantity == 0) {
+        addToCartButton.addClass('disabled');
+        addToCartButton.text('Sản phẩm tạm hết');
+      } else {
+        addToCartButton.removeClass('disabled');
+        addToCartButton.text('Thêm vào giỏ hàng');
+      }
 
       if (data.code == 200) {
         $('#product-stock').text(dataProd.quantity);
@@ -119,7 +128,7 @@ const productFilterHtml = (itemDataProd) => {
                             <li class="select-option">
                                 ${
                                   quantity > 0
-                                    ? `<a href="${productLink}" class="btn-action-lagre">Lựa chọn phân loại</a>`
+                                    ? `<a href="${productLink}" class="btn-action-lagre">Mua sản phẩm</a>`
                                     : `<a class="btn-action-lagre disabled" href="#">Sản phẩm hết hàng</a>`
                                 }
                             </li>

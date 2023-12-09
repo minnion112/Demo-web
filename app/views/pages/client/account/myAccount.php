@@ -80,7 +80,7 @@
                                                         <td>
                                                             <?= $dataOrderItem['order_date'] ?>
                                                         </td>
-                                                        <td>
+                                                        <td class="fw-bold ">
                                                             <?= $dataOrderItem['payment_method_name'] ?>
                                                         </td>
 

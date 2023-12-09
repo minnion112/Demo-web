@@ -43,7 +43,6 @@ class Cart extends Controller
 
         $dataCart = $this->cartModel->getAllCart($this->user_id);
 
-
         // handle khi co datacart
         if (!empty($dataCart)) {
             $dataCartNew = [];
@@ -116,13 +115,22 @@ class Cart extends Controller
         //số lượng người dùng chọn
         $quantityToAdd = $dataPost['quantity'];
 
-
         // Loi o day phai kiem tra cart id nua 
         $dataCartItem = $this->cartModel->getOneCartItemProdVariant($dataPost['product_variant_id'], $dataCart['id']);
 
         if (!empty($dataCartItem)) {
-            // Nếu đã có sản phẩm rồi thì cộng thêm số lượng
+
+            // Kiem tra so luong san pham trong gio hang
+            $dataProductCartItem = $this->cartModel->getOneCartItem($dataCartItem['id']);
+
+            // Tong so luong san pham chuan bi them vao gio hang
             $quantityToAdd += $dataCartItem['quantity'];
+
+            //Kiem tra so luong cua bien the co lon hon so luong cua gio hang hay khong
+            if ($quantityToAdd > $dataProductCartItem['product_variant_quantity']) {
+                echo $this->res->dataApi(400, 'Vui lòng kiểm tra lại số lượng.', []);
+                return;
+            }
 
             $updateCartItem = $this->cartModel->updateCartItem($dataCartItem['id'], [
                 'quantity' => $quantityToAdd,
@@ -161,12 +169,18 @@ class Cart extends Controller
         $dataCartItem = $this->cartModel->getOneCartItem($id);
 
         if (empty($dataCartItem)) {
-            echo $this->res->dataApi(400, 'Có lỗi vui lòng thử lại.', [$dataCartItem]);
+            echo $this->res->dataApi(400, 'Có lỗi vui lòng thử lại.', []);
             return;
         }
 
         if ($action == 'plus') {
             $newQuantity = $dataCartItem['quantity'] + 1;
+            //Kiem tra so luong cua bien the co lon hon so luong cua gio hang hay khong
+            if ($newQuantity > $dataCartItem['product_variant_quantity']) {
+                echo $this->res->dataApi(400, 'Vui lòng kiểm tra lại số lượng.', []);
+                return;
+            }
+
             $newTotalPrice =   $dataCartItem['totalPrice'] + $dataCartItem['price'];
         } elseif ($action == 'minus' && $dataCartItem['quantity'] > 1) {
             $newQuantity = $dataCartItem['quantity'] - 1;

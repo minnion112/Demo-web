@@ -30,7 +30,7 @@ class Coupon extends Controller
         // Kiem tra ma giam gia co hop le hay khong
 
         if (empty($dataCoupon) || $dataCoupon['min_amount'] > $totalPrice || strtotime($dataCoupon['expired']) < time() || $dataCoupon['quantity'] == 0 || $dataCoupon['status'] == 0) {
-            echo $this->res->dataApi('400', 'Vui lòng kiểm tra lại mã giảm giá.', []);
+            echo $this->res->dataApi('400', 'Mã giảm giá đã hết hạn hoặc không phù hợp.', []);
             return;
         }
 
