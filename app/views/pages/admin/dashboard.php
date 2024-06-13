@@ -206,68 +206,6 @@
                 </div>
             </div>
 
-            <!--  -->
-
-            <!-- <div class="col-xl-6">
-                <div class="card-hover card-table">
-                    <div class="card-header pb-1">
-                        <div class="card-header-title">
-                            <h4>coming soon</h4>
-                        </div>
-                    </div>
-                    <div class="card-body border-0 p-0">
-                        <table class="table box--padding">
-
-                            <tbody>
-
-                                <tr>
-                                    <td>
-                                        <div class="product-detail-box">
-                                            <h6 class="mb-2">Aata Buscuit</h6>
-                                            <h5 class="mb-0">#64548</h5>
-                                        </div>
-                                    </td>
-
-                                    <td>
-                                        <div class="product-detail-box">
-                                            <h6 class="mb-2">Date Placed</h6>
-                                            <h5 class="mb-0">5/1/22</h5>
-                                        </div>
-                                    </td>
-
-                                    <td>
-                                        <div class="product-detail-box">
-                                            <h6 class="mb-2">Price</h6>
-                                            <h5 class="mb-0">$625</h5>
-                                        </div>
-                                    </td>
-
-                                    <td>
-                                        <div class="product-detail-box">
-                                            <h6 class="mb-2">Order Status</h6>
-                                            <h5 class="mb-0">123</h5>
-                                        </div>
-                                    </td>
-
-                                    <td>
-                                        <div class="product-detail-box">
-                                            <h6 class="mb-2">Payment</h6>
-                                            <h5 class="mb-0 paid ">Unpaid</h5>
-
-                                        </div>
-                                    </td>
-
-                                </tr>
-
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div> -->
-
-
-            <!--  -->
 
             <div class="col-xl-6 ">
                 <div class="card-hover card-chart">

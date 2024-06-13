@@ -601,7 +601,6 @@ class Account extends Controller
             if (empty($urlAvatar)) {
                 return $this->res->setToastSession('error', 'Có lỗi vể ảnh vui lòng kiểm tra lại.', 'my-account');
             }
-
             $dataUpdate['avatar'] = $urlAvatar;
         }
 

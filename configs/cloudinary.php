@@ -1,6 +1,7 @@
 <?php
 $config['cloudinary'] = [
-    'cloud_name' => 'dfgkkkcoc',
-    'api_key' => '571712117181734',
-    'api_secret' => '_UFgTOr8fEtfFn0ErqLMUEmUM8o',
+    'cloud_name' => 'dcnmp44wf',
+    'api_key' => '515581913347188',
+    'api_secret' => '6DC_e6PaGh2LJmbq29cxo0RT8Lc',
+    'forders' =>'upload_ecommerce',
 ];

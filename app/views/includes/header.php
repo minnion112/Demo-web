@@ -117,6 +117,12 @@ $menu = array(
             </div>
         </nav>
     </div>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  chat-title="chatbottmdt"
+  agent-id="5bfa0216-b803-4105-a709-f07a1a75f3f1"
+  language-code="en"
+></df-messenger>
 </header>
 
 <?php include 'cart.php' ?>
